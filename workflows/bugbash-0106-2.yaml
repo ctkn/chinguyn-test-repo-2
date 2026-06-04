@@ -1,6 +1,6 @@
 # {"Glue-task":{"x":229.5,"y":224.5}}
-bugbash-0106-2:
-  dag_id: bugbash-0106-2
+bugbash-0106-2-syQLvR4Xuj:
+  dag_id: bugbash-0106-2-syQLvR4Xuj
   tasks:
     Glue-task:
       operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
