@@ -1,0 +1,6 @@
+# {"Glue-task":{"x":376,"y":230}}
+0406-test-deleting-2:
+  dag_id: 0406-test-deleting-2
+  tasks:
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
