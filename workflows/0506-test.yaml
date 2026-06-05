@@ -1,0 +1,7 @@
+# {"Glue-task":{"x":285,"y":240}}
+0506-test:
+  dag_id: 0506-test
+  tasks:
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
+      job_name: 0427test
