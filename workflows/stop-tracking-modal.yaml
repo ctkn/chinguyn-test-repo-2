@@ -1,0 +1,7 @@
+# {"Glue-task":{"x":160.5,"y":206.5}}
+stop-tracking-modal:
+  dag_id: stop-tracking-modal
+  tasks:
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
+      job_name: 0427test
