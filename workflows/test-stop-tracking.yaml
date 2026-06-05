@@ -1,0 +1,7 @@
+# {"Glue-task":{"x":447,"y":356}}
+test-stop-tracking:
+  dag_id: test-stop-tracking
+  tasks:
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
+      job_name: bcjoseph-511209
