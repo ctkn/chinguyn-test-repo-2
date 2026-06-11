@@ -1,19 +1,7 @@
-# {"Glue-task":{"x":408.5,"y":160},"Notebook-task":{"x":693,"y":271}}
+# {"Glue-task":{"x":408.5,"y":160}}
 0906-test-1:
   dag_id: 0906-test-1
   tasks:
     Glue-task:
       operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
       job_name: 0427test
-    Notebook-task:
-      dependencies:
-        - Glue-task
-      operator: >-
-        airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
-      input_config:
-        input_params: {}
-        input_path: repos/3w6epbsoub7cpc/chinguyn-test-repo-2/chi-branch/test-nb.ipynb
-      compute: {}
-      output_config:
-        output_formats:
-          - NOTEBOOK
