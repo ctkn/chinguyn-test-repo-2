@@ -1,0 +1,14 @@
+# {"Notebook-task":{"x":380,"y":299}}
+1806-workflow-01:
+  dag_id: 1806-workflow-01
+  tasks:
+    Notebook-task:
+      operator: >-
+        airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
+      input_config:
+        input_params: {}
+        input_path: getting_started.ipynb
+      compute: {}
+      output_config:
+        output_formats:
+          - NOTEBOOK
