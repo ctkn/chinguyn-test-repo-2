@@ -1,0 +1,15 @@
+# {"Notebook-task":{"x":563,"y":331}}
+2306-test-1:
+  dag_id: 2306-test-1
+  tasks:
+    Notebook-task:
+      operator: >-
+        airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
+      input_config:
+        input_params: {}
+        input_path: repos/3w6epbsoub7cpc/chinguyn-test-repo-2/chi-branch/test-nb.ipynb
+      compute: {}
+      output_config:
+        output_formats:
+          - NOTEBOOK
+  is_paused_upon_creation: false
