@@ -1,8 +1,10 @@
-# {"Notebook-task":{"x":492,"y":296}}
+# {"Notebook-task":{"x":492,"y":296},"Glue-task":{"x":151.5,"y":267.5}}
 2906-bb-workflows-03:
   dag_id: 2906-bb-workflows-03
   tasks:
     Notebook-task:
+      dependencies:
+        - Glue-task
       operator: >-
         airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
       input_config:
@@ -12,3 +14,6 @@
       output_config:
         output_formats:
           - NOTEBOOK
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
+      job_name: 2906-bb-job-01
