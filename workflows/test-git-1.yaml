@@ -1,0 +1,15 @@
+# {"Notebook-task":{"x":388,"y":86}}
+test-git-1:
+  dag_id: test-git-1
+  is_paused_upon_creation: false
+  tasks:
+    Notebook-task:
+      operator: >-
+        airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
+      input_config:
+        input_params: {}
+        input_path: workflows/glue-conn.ipynb
+      compute: {}
+      output_config:
+        output_formats:
+          - NOTEBOOK
