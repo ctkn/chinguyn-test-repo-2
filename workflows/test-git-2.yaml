@@ -1,6 +1,6 @@
-# {"Notebook-task":{"x":787,"y":310}}
-test-git-2:
-  dag_id: test-git-2
+# {"Notebook-task":{"x":647,"y":251},"Notebook-task-1":{"x":871.5,"y":350}}
+2105-chi-test:
+  dag_id: 2105-chi-test
   is_paused_upon_creation: false
   tasks:
     Notebook-task:
@@ -8,7 +8,21 @@ test-git-2:
         airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
       input_config:
         input_params: {}
-        input_path: workflows/glue-conn.ipynb
+        input_path: >-
+          repos/3w6epbsoub7cpc/chinguyn-test-repo-2/chi-branch/Untitled
+          2026-06-16 10:24:31.ipynb
+      compute: {}
+      output_config:
+        output_formats:
+          - NOTEBOOK
+    Notebook-task-1:
+      dependencies:
+        - Notebook-task
+      operator: >-
+        airflow.providers.amazon.aws.operators.sagemaker_unified_studio.SageMakerNotebookOperator
+      input_config:
+        input_params: {}
+        input_path: repos/3w6epbsoub7cpc/chinguyn-test-repo-2/chi-branch/test-nb.ipynb
       compute: {}
       output_config:
         output_formats:
