@@ -1,0 +1,111 @@
+{
+  "JobName": "1806-job-01",
+  "formInput": {
+    "FileName": "1806-job-01",
+    "ContentType": "text/x-python",
+    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1781820142785 = spark.read.format(\"csv\") \\\n    .option(\"inferschema\", \"true\") \\\n    .option(\"multiLine\", \"true\") \\\n    .option(\"header\", \"true\") \\\n    .option(\"recursiveFileLookup\", \"true\") \\\n    .option(\"sep\", \",\") \\\n    .load(\"s3://hhhhhhhhhhh\")\n"
+  },
+  "bucketName": "amazon-sagemaker-619071339486-us-west-2-add013f1542b",
+  "JobUpdate": {
+    "Timeout": 480,
+    "WorkerType": "G.1X",
+    "NumberOfWorkers": 10,
+    "GlueVersion": "5.1",
+    "Name": "1806-job-01",
+    "MaxRetries": 0,
+    "Role": "arn:aws:iam::619071339486:role/datazone_usr_role_3rtbcb4tg7ffv4_3stc5hzvgf9x5c",
+    "JobMode": "VISUAL",
+    "JobRunQueuingEnabled": false,
+    "ExecutionProperty": {
+      "MaxConcurrentRuns": 1
+    },
+    "ExecutionClass": "STANDARD",
+    "NonOverridableArguments": {},
+    "Connections": {
+      "Connections": [
+        "datazone-glue-network-connection-subnet-0071187ed94584c2a-3rtbcb4tg7ffv4-dev",
+        "datazone-glue-network-connection-subnet-02dc59ac936415a65-3rtbcb4tg7ffv4-dev",
+        "datazone-glue-network-connection-subnet-0db4a398a79703d61-3rtbcb4tg7ffv4-dev"
+      ]
+    },
+    "DefaultArguments": {
+      "--enable-lakeformation-fine-grained-access": "false",
+      "--job-language": "python",
+      "--TempDir": "s3://amazon-sagemaker-619071339486-us-west-2-add013f1542b/dzd-4zo38b4ng6n4gg/3rtbcb4tg7ffv4/sys/glue/temp/",
+      "--enable-metrics": "true",
+      "--enable-observability-metrics": "false",
+      "--enable-continuous-cloudwatch-log": "false",
+      "--spark-event-logs-path": "s3://amazon-sagemaker-619071339486-us-west-2-add013f1542b/dzd-4zo38b4ng6n4gg/3rtbcb4tg7ffv4/sys/glue/spark/",
+      "--enable-glue-datacatalog": "true",
+      "--enable-spark-ui": "true",
+      "--enable-auto-scaling": "true",
+      "--smus-job-compute": "project.spark.compatibility",
+      "--smus-orig-asset": "repos/6gszextgedvbio/chinguyn-test-repo-2/main/jobs/1806-job-01/1806-job-01.vetl",
+      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.us-west-2.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.us-west-2.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=619071339486 --conf spark.sql.catalog.spark_catalog.glue.account-id=619071339486 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.us-west-2.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=us-west-2 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-4zo38b4ng6n4gg --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=619071339486 --conf spark.glue.JOB_NAME=1806-job-01",
+      "--custom-logGroup-prefix": "datazone-3rtbcb4tg7ffv4-dev",
+      "author": "arn:aws:iam::619071339486:role/Admin"
+    },
+    "connection": {
+      "configurations": [
+        {
+          "classification": "GlueDefaultArgument",
+          "properties": {
+            "--enable-lakeformation-fine-grained-access": "false"
+          }
+        }
+      ],
+      "domainIdentifier": "dzd-4zo38b4ng6n4gg",
+      "projectIdentifier": "3rtbcb4tg7ffv4",
+      "environmentIdentifier": "3stc5hzvgf9x5c",
+      "connectionIdentifier": "c2j5fqmtx6bdw0",
+      "name": "project.spark.compatibility",
+      "displayType": "Glue (Spark)",
+      "type": "SPARK",
+      "authorizationMode": "PROJECT",
+      "provisioningType": "MANAGED",
+      "createdAt": "2026-06-18T21:49:53.238Z",
+      "updatedAt": "2026-06-18T21:49:53.238Z",
+      "location": {
+        "awsRegion": "us-west-2",
+        "awsAccountId": "619071339486"
+      },
+      "physicalEndpoints": [
+        {
+          "awsLocation": {
+            "awsAccountId": "619071339486",
+            "awsRegion": "us-west-2"
+          },
+          "glueConnectionName": "datazone-glue-network-connection-subnet-0071187ed94584c2a-3rtbcb4tg7ffv4-dev",
+          "glueConnectionNames": [
+            "datazone-glue-network-connection-subnet-0071187ed94584c2a-3rtbcb4tg7ffv4-dev",
+            "datazone-glue-network-connection-subnet-02dc59ac936415a65-3rtbcb4tg7ffv4-dev",
+            "datazone-glue-network-connection-subnet-0db4a398a79703d61-3rtbcb4tg7ffv4-dev"
+          ]
+        }
+      ],
+      "sparkGlueProperties": {
+        "glueConnection": {},
+        "sessionConfigs": {
+          "idle_timeout": 60,
+          "glue_version": "5.0",
+          "worker_type": "G.1X",
+          "number_of_workers": 10
+        }
+      }
+    },
+    "Command": {
+      "Name": "glueetl",
+      "ScriptLocation": "s3://amazon-sagemaker-619071339486-us-west-2-add013f1542b/dzd-4zo38b4ng6n4gg/3rtbcb4tg7ffv4/shared/repos/6gszextgedvbio/chinguyn-test-repo-2/main/jobs/1806-job-01/1806-job-01.py",
+      "PythonVersion": "3.9"
+    },
+    "Tags": {
+      "AmazonDataZoneProject": "3rtbcb4tg7ffv4",
+      "AmazonDataZoneUsername": "arn:aws:iam::619071339486:role/Admin"
+    },
+    "SourceControlDetails": {
+      "Repository": "chinguyn-test-repo-2",
+      "Branch": "main",
+      "Folder": "6gszextgedvbio"
+    }
+  }
+}

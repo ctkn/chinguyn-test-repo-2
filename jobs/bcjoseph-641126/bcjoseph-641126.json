@@ -1,0 +1,103 @@
+{
+  "JobName": "bcjoseph-641126",
+  "formInput": {
+    "FileName": "bcjoseph-641126",
+    "ContentType": "text/x-python",
+    "Body": "import sys\nfrom pyspark.context import SparkContext\nfrom pyspark.sql import SparkSession\n\nsc = SparkContext.getOrCreate()\nspark = SparkSession.builder.getOrCreate()\n\n# Script generated for node S3DataSource\nS3DataSource_1780586753367 = spark.read.format(\"csv\") \\\n    .option(\"inferschema\", \"true\") \\\n    .option(\"multiLine\", \"true\") \\\n    .option(\"header\", \"true\") \\\n    .option(\"recursiveFileLookup\", \"true\") \\\n    .option(\"sep\", \",\") \\\n    .load(\"s3://fdsafdsa\")\n"
+  },
+  "bucketName": "amazon-sagemaker-619071339486-us-west-2-6ckb6bkxhzh2mo",
+  "JobUpdate": {
+    "Timeout": 480,
+    "WorkerType": "G.1X",
+    "NumberOfWorkers": 10,
+    "GlueVersion": "5.1",
+    "Name": "bcjoseph-641126",
+    "MaxRetries": 0,
+    "Role": "arn:aws:iam::619071339486:role/service-role/AmazonSageMakerUserIAMExecutionRole_bdaa3e26",
+    "JobMode": "VISUAL",
+    "JobRunQueuingEnabled": false,
+    "ExecutionProperty": {
+      "MaxConcurrentRuns": 1
+    },
+    "ExecutionClass": "STANDARD",
+    "NonOverridableArguments": {},
+    "Connections": {
+      "Connections": [
+        "srirsund-test-wg"
+      ]
+    },
+    "DefaultArguments": {
+      "--enable-lakeformation-fine-grained-access": "false",
+      "--job-language": "python",
+      "--TempDir": "s3://amazon-sagemaker-619071339486-us-west-2-6ckb6bkxhzh2mo/sys/glue/temp/",
+      "--enable-metrics": "true",
+      "--enable-observability-metrics": "false",
+      "--enable-continuous-cloudwatch-log": "false",
+      "--spark-event-logs-path": "s3://amazon-sagemaker-619071339486-us-west-2-6ckb6bkxhzh2mo/sys/glue/spark/",
+      "--enable-glue-datacatalog": "true",
+      "--enable-spark-ui": "true",
+      "--enable-auto-scaling": "true",
+      "--smus-job-compute": "default.spark",
+      "--smus-orig-asset": "repos/3w6epbsoub7cpc/chinguyn-test-repo-2/main/jobs/bcjoseph-641126/bcjoseph-641126.vetl",
+      "--conf": "spark.sql.extensions=org.apache.iceberg.spark.extensions.IcebergSparkSessionExtensions --conf spark.datasource.redshift.community.glue_endpoint=https://glue.us-west-2.amazonaws.com --conf spark.datasource.redshift.community.data_api_endpoint=https://redshift-data.us-west-2.amazonaws.com --conf spark.hadoop.fs.s3.impl=com.amazon.ws.emr.hadoop.fs.EmrFileSystem --conf spark.driver.maxResultSize=0 --conf spark.sql.catalog.spark_catalog=org.apache.iceberg.spark.SparkSessionCatalog --conf spark.sql.catalog.spark_catalog.catalog-impl=org.apache.iceberg.aws.glue.GlueCatalog --conf spark.sql.catalog.spark_catalog.glue.id=619071339486 --conf spark.sql.catalog.spark_catalog.glue.account-id=619071339486 --conf spark.sql.catalog.spark_catalog.glue.endpoint=https://glue.us-west-2.amazonaws.com --conf spark.sql.catalog.spark_catalog.client.region=us-west-2 --conf spark.extraListeners=io.openlineage.spark.agent.OpenLineageSparkListener --conf spark.openlineage.transport.type=amazon_datazone_api --conf spark.openlineage.transport.domainId=dzd-bks7v4cexjd8ls --conf spark.openlineage.columnLineage.datasetLineageEnabled=True --conf spark.openlineage.facets.custom_environment_variables=[AWS_DEFAULT_REGION;GLUE_VERSION;GLUE_COMMAND_CRITERIA;GLUE_PYTHON_VERSION;] --conf spark.glue.accountId=619071339486 --conf spark.glue.JOB_NAME=bcjoseph-641126",
+      "--custom-logGroup-prefix": "datazone-6ckb6bkxhzh2mo-dev",
+      "author": "arn:aws:iam::619071339486:role/Admin"
+    },
+    "connection": {
+      "configurations": [
+        {
+          "classification": "GlueDefaultArgument",
+          "properties": {
+            "--enable-lakeformation-fine-grained-access": "false"
+          }
+        }
+      ],
+      "domainIdentifier": "dzd-bks7v4cexjd8ls",
+      "projectIdentifier": "6ckb6bkxhzh2mo",
+      "environmentIdentifier": "4i1jle087wzno0",
+      "connectionIdentifier": "59d7oznzrzb0nk",
+      "name": "default.spark",
+      "displayType": "Glue (Spark)",
+      "type": "SPARK",
+      "authorizationMode": "PROJECT",
+      "provisioningType": "MANAGED",
+      "createdAt": "2026-04-27T05:51:22.579Z",
+      "updatedAt": "2026-04-27T05:51:22.579Z",
+      "location": {
+        "awsRegion": "us-west-2",
+        "awsAccountId": "619071339486"
+      },
+      "physicalEndpoints": [
+        {
+          "awsLocation": {
+            "awsAccountId": "619071339486",
+            "awsRegion": "us-west-2"
+          }
+        }
+      ],
+      "sparkGlueProperties": {
+        "glueConnection": {},
+        "sessionConfigs": {
+          "idle_timeout": 60,
+          "glue_version": "5.0",
+          "worker_type": "G.1X",
+          "number_of_workers": 10
+        }
+      }
+    },
+    "Command": {
+      "Name": "glueetl",
+      "ScriptLocation": "s3://amazon-sagemaker-619071339486-us-west-2-6ckb6bkxhzh2mo/shared/repos/3w6epbsoub7cpc/chinguyn-test-repo-2/main/jobs/bcjoseph-641126/bcjoseph-641126.py",
+      "PythonVersion": "3.9"
+    },
+    "Tags": {
+      "AmazonDataZoneProject": "6ckb6bkxhzh2mo",
+      "AmazonDataZoneUsername": "arn:aws:iam::619071339486:role/Admin"
+    },
+    "SourceControlDetails": {
+      "Repository": "chinguyn-test-repo-2",
+      "Branch": "main",
+      "Folder": "3w6epbsoub7cpc"
+    }
+  }
+}
