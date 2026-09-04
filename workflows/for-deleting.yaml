@@ -1,7 +1,0 @@
-# {"Glue-task":{"x":408,"y":279}}
-for-deleting:
-  dag_id: for-deleting
-  tasks:
-    Glue-task:
-      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
-      job_name: 0427test
