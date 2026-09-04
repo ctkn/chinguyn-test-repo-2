@@ -1,0 +1,8 @@
+# {"Glue-task":{"x":381,"y":200}}
+workflows-test:
+  dag_id: workflows-test
+  tasks:
+    Glue-task:
+      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
+      job_name: 1506-test
+  is_paused_upon_creation: false
