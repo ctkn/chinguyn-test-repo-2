@@ -1,7 +1,0 @@
-# {"Glue-task":{"x":440.5,"y":202.5}}
-2906-bb-workflows-02:
-  dag_id: 2906-bb-workflows-02
-  tasks:
-    Glue-task:
-      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
-      job_name: 2906-bb-job-01

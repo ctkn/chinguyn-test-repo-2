@@ -1,6 +1,0 @@
-# {"Glue-task":{"x":562.5,"y":241}}
-2705-chi-test:
-  dag_id: 2705-chi-test
-  tasks:
-    Glue-task:
-      operator: airflow.providers.amazon.aws.operators.glue.GlueJobOperator
