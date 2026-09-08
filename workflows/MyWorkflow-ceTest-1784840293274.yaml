@@ -1,0 +1,7 @@
+# {"Airflow-task":{"x":959.1999816894531,"y":431.4000015258789}}
+MyWorkflow-ceTest-1784840293274:
+  dag_id: MyWorkflow-ceTest-1784840293274
+  is_paused_upon_creation: false
+  tasks:
+    Airflow-task:
+      operator: airflow.operators.empty.EmptyOperator
