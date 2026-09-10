@@ -8,9 +8,9 @@
   },
   "JobUpdate": {
     "Name": "chi-test-0910-05",
-    "Timeout": 480,
+    "Timeout": 500,
     "WorkerType": "G.1X",
-    "NumberOfWorkers": 10,
+    "NumberOfWorkers": 5,
     "GlueVersion": "5.1",
     "MaxRetries": 0,
     "Role": "arn:aws:iam::619071339486:role/service-role/AmazonSageMakerUserIAMExecutionRole_bdaa3e26",
